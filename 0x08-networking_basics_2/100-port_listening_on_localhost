@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# nc is a command line utility that reads and writes data accross connection
+#-l makes nc only listen incoming connection rather than intiate
+
+nc -l localhost 98

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#displays all active IPv4 IPs on the machine it’s executed on
+#ifconfig displays detalis but since we want only the ip address to return specifically IPv4, we use grep to display a certain line
+# and we determine the regex, -E displays the extended version of regex, which +,?,{}, | means something than their literal expression in BRE(Basic regular expression)
+# -o only matches the non-empty ones
+
+ifconfig | grep -Eo "(inet [0-9]*.*)" | awk '{print $2}'
