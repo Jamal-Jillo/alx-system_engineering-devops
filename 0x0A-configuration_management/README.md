@@ -1,7 +1,9 @@
 # 0x0A-configuration_management
 
 ==============================
+
 This is a collection of configuration management tools and techniques.
+
 ==============================
 
 ## Table of Contents
