@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # Script that sets the port 80
-apt-get install apache2 -y
-service apache2 start
-echo "Hello Holberton" > /var/www/html/index.html
-echo "ServerName localhost" >> /etc/apache2/apache2.conf
+# Go to sites-enabled folder for Nginx
+cd /etc/nginx/sites-enabled/;
+# Delete the default file
+rm default;
+# Create symbolic link to the deafult file in sites-available
+ln -s /etc/nginx/sites-available/default default;
+# Restart Nginx
+service nginx restart;
